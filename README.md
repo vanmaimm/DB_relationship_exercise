@@ -1,5 +1,7 @@
 # DB_relationship_exercise
-##Create table
+
+## Create table
+
 ### Create Users table
 ```
 CREATE TABLE users (
