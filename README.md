@@ -34,3 +34,36 @@ CREATE TABLE photos(
 	FOREIGN KEY (category_id) REFERENCES categories(id)
 );
 ```
+### Create tags table
+```
+CREATE TABLE tags(
+	id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	name VARCHAR(50),
+	created_at DATETIME,
+	updated_at DATETIME 
+);
+```
+### Create taggable table
+```
+CREATE TABLE taggale(
+	tag_id int,
+    	photo_id int,
+	created_at DATETIME,
+	updated_at DATETIME,
+	FOREIGN KEY (tag_id) REFERENCES tags(id),
+    	FOREIGN KEY (photo_id) REFERENCES photos(id),
+  	PRIMARY KEY (tag_id,photo_id)
+);
+```
+### Create photo_descriptions table
+```
+CREATE TABLE photo_descriptions(
+	id int NOT NULL,
+	content VARCHAR(50),
+	created_at DATETIME,
+	updated_at DATETIME,
+	FOREIGN KEY (id) REFERENCES photos(id),
+	PRIMARY KEY (id)
+);
+```
+
