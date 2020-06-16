@@ -66,4 +66,10 @@ CREATE TABLE photo_descriptions(
 	PRIMARY KEY (id)
 );
 ```
+## Insert into database
+### Users
+```
+
+```
+```
 
